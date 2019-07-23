@@ -1,7 +1,7 @@
 import cv2
 from Managers import WindowManager, CaptureManager
 
-
+#liushupeng
 class Cameo(object):
     def __init__(self):
         self._windowManager = WindowManager('Cameo', self.onKeyPress)
