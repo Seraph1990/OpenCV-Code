@@ -14,7 +14,7 @@ def strokeEdges(src, dst, blurKsize = 7, edgeKsize = 5):
     channels = cv2.split(src)
     for channel in channels:
         channel[:] = channel * normalizedInverseAlpha
-    cv2.merge(channel, dst)
+    cv2.merge(channels, dst)
 
 class VConvolutionFilter(object):
     """A filter that applies a convolution to V(or all of BGR)"""
