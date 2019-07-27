@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-planets = cv2.imread('F:\\Images\\planet_glow.jpg')
+planets = cv2.imread('planet_glow.jpg')
 gray_img = cv2.cvtColor(planets, cv2.COLOR_BGR2GRAY)
 img = cv2.medianBlur(gray_img, 5)
 cimg = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
@@ -16,7 +16,7 @@ for i in circles[0, :]:
     # draw the center of the circle
     cv2.circle(planets, (i[0], i[1]), 2, (0, 0, 255), 3)
 
-cv2.imwrite("F:\\Images\\planets_circles.jpg", planets)
+cv2.imwrite("planets_circles.jpg", planets)
 cv2.imshow("HoughCircles", planets)
 cv2.waitKey()
 cv2.destroyAllWindows()

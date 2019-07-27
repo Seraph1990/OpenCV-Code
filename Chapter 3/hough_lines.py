@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("F:\\Images\\hamer.jpg")
+img = cv2.imread("lines.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 edges = cv2.Canny(gray, 50, 120)
 minLenLength = 20
